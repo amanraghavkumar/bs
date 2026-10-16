@@ -1,0 +1,263 @@
+/* =========================================================================
+   ROMANTIC BIRTHDAY THEME & UTILITIES
+   ========================================================================= */
+
+:root {
+  --color-plum-950: #0f0414;
+  --color-plum-900: #1a0822;
+  --color-plum-850: #240b30;
+  --color-plum-800: #330f44;
+  --color-plum-700: #491461;
+  --color-rose-500: #f43f5e;
+  --color-rose-400: #fb7185;
+  --color-pink-500: #ec4899;
+  --color-pink-400: #f472b6;
+  --color-lavender-400: #c084fc;
+  --color-lavender-300: #d8b4fe;
+  --color-cream: #fff5f6;
+  --color-gold: #fde047;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', serif;
+  --font-handwriting: 'Dancing Script', 'Brush Script MT', cursive, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-plum-950);
+  color: var(--color-cream);
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 0%, #2e0d3c 0%, #170720 50%, #0d0312 100%);
+  color: #fce7f3;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #140719;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a154b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Typography Utility Classes */
+.font-serif-romantic {
+  font-family: var(--font-serif);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-sans-clean {
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism & UI Panels */
+.glass-panel {
+  background: rgba(35, 14, 45, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(244, 114, 182, 0.18);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 24px 0 rgba(244, 114, 182, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(244, 114, 182, 0.45);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 30px 4px rgba(244, 114, 182, 0.2);
+  transform: translateY(-4px);
+}
+
+.glass-pill {
+  background: rgba(45, 16, 56, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 114, 182, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Text & Box Glows */
+.text-glow {
+  text-shadow: 0 0 12px rgba(244, 114, 182, 0.6), 0 0 28px rgba(244, 114, 182, 0.3);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(254, 240, 138, 0.65), 0 0 28px rgba(245, 158, 11, 0.3);
+}
+
+.box-glow {
+  box-shadow: 0 0 30px rgba(244, 114, 182, 0.35), 0 0 60px rgba(219, 39, 119, 0.15);
+}
+
+.box-glow-gold {
+  box-shadow: 0 0 25px rgba(254, 240, 138, 0.4), 0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+/* Candle flame animation */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #f59e0b) drop-shadow(0 0 16px #ef4444);
+  }
+  25% {
+    transform: scale(1.05, 0.95) rotate(2deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #fbbf24) drop-shadow(0 0 20px #f43f5e);
+  }
+  50% {
+    transform: scale(0.95, 1.08) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 9px #f59e0b) drop-shadow(0 0 15px #dc2626);
+  }
+  75% {
+    transform: scale(1.03, 1.02) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 14px #fbbf24) drop-shadow(0 0 22px #e11d48);
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Floating animation */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2.8s ease-in-out infinite;
+}
+
+/* Parchment / Paper effect for letter */
+.paper-texture {
+  background: radial-gradient(circle at center, #fffef9 0%, #fff7ed 70%, #fde68a 100%);
+  color: #3b1407;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(217, 119, 6, 0.2);
+}
+
+/* Polaroid vintage style */
+.polaroid-card {
+  background: #ffffff;
+  padding: 12px 12px 28px 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #333333;
+}
+.polaroid-card:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 45px rgba(244, 114, 182, 0.35), 0 8px 18px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+/* Washi tape effect */
+.washi-tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 24px;
+  background: rgba(254, 205, 211, 0.7);
+  backdrop-filter: blur(4px);
+  border-left: 2px dashed rgba(244, 63, 94, 0.3);
+  border-right: 2px dashed rgba(244, 63, 94, 0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 5;
+}
+
+/* Envelope 3D styling */
+.envelope-wrapper {
+  perspective: 1000px;
+}
+
+/* Interactive button effects */
+.btn-magical {
+  background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #d946ef 100%);
+  color: white;
+  box-shadow: 0 10px 25px -4px rgba(244, 63, 94, 0.5), 0 0 15px rgba(236, 72, 153, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-magical:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 35px -4px rgba(244, 63, 94, 0.7), 0 0 25px rgba(236, 72, 153, 0.5);
+}
+.btn-magical:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(244, 114, 182, 0.3);
+  color: #fce7f3;
+  transition: all 0.25s ease;
+}
+.btn-secondary:hover {
+  background: rgba(244, 114, 182, 0.18);
+  border-color: rgba(244, 114, 182, 0.6);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Equalizer Bars Animation */
+@keyframes barBounce {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+.eq-bar-1 { animation: barBounce 0.8s ease-in-out infinite; }
+.eq-bar-2 { animation: barBounce 0.6s ease-in-out infinite 0.2s; }
+.eq-bar-3 { animation: barBounce 0.9s ease-in-out infinite 0.4s; }
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

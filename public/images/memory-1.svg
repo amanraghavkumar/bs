@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="40%" stop-color="#be185d"/>
+      <stop offset="70%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#sunset)"/>
+  <circle cx="300" cy="350" r="110" fill="#fff1f2" opacity="0.85"/>
+  <!-- Mountain silhouettes -->
+  <path d="M-50,600 L180,420 L350,560 L480,440 L650,600 Z" fill="#4c0519" opacity="0.7"/>
+  <path d="M-20,600 L100,480 L280,600 Z" fill="#2e0410" opacity="0.85"/>
+  <path d="M380,600 L500,490 L620,600 Z" fill="#2e0410" opacity="0.85"/>
+  <!-- Sparkles and birds -->
+  <path d="M220,240 Q230,230 240,240 Q250,230 260,240 Q250,245 240,243 Q230,245 220,240 Z" fill="#ffe4e6" opacity="0.7"/>
+  <path d="M360,200 Q370,192 380,200 Q390,192 400,200 Q390,204 380,202 Q370,204 360,200 Z" fill="#ffe4e6" opacity="0.7"/>
+  <rect x="80" y="510" width="440" height="50" rx="25" fill="#000000" fill-opacity="0.4"/>
+  <text x="300" y="542" fill="#ffffff" font-size="14" font-family="sans-serif" text-anchor="middle">✦ Sunset Memories • Replace in public/images/memory-1.jpg ✦</text>
+</svg>
