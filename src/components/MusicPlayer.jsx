@@ -26,6 +26,7 @@ export default function MusicPlayer({ config }) {
 
   return (
     <div
+      className="top-controls-right"
       style={{
         position: 'fixed',
         top: '20px',
@@ -37,11 +38,11 @@ export default function MusicPlayer({ config }) {
       }}
     >
       <div
-        className="glass-pill"
+        className="glass-pill music-pill"
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '10px',
+          gap: '8px',
           padding: '8px 14px',
           borderRadius: '9999px',
           transition: 'all 0.3s ease',
@@ -62,8 +63,9 @@ export default function MusicPlayer({ config }) {
           )}
         </div>
 
-        {/* Track Title (reveals on hover or small screen) */}
+        {/* Track Title (hidden on small phones to save space) */}
         <span
+          className="music-title-text"
           style={{
             fontSize: '13px',
             fontWeight: '500',

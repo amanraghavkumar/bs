@@ -84,7 +84,7 @@ export default function LetterSurprise({ letterData, recipient }) {
               position: 'relative',
               width: '100%',
               maxWidth: '460px',
-              height: '280px',
+              aspectRatio: '460/280',
               margin: '0 auto',
               backgroundColor: '#3f1547',
               borderRadius: '16px',

@@ -8,6 +8,10 @@
  * 1. Place her photos in the `public/images/` folder (e.g. `portrait.jpg`, `photo1.jpg`, etc.)
  * 2. Update the paths below (e.g. change '/images/portrait-main.svg' to '/images/portrait.jpg')
  * 
+ * 🌧️ PHOTO RAIN (तस्वीरों की बारिश):
+ * A collection of photos falls gently like rain from top to bottom.
+ * You can add as many photos as you want to `photoRain.photos`!
+ * 
  * 🎵 HOW TO ADD CUSTOM MUSIC:
  * 1. Place her favorite song (mp3 file) in `public/music/` (e.g. `song.mp3`)
  * 2. Set `music.audioSrc: '/music/song.mp3'`
@@ -119,7 +123,93 @@ export const birthdayData = {
     ],
   },
 
-  // ── 3. Surprise One: Personal Birthday Letter 💌 ──────────────────────
+  // ── 3. Photo Rain Collection (तस्वीरों की बारिश) 🌧️📸 ──────────────────
+  photoRain: {
+    enabled: true,
+    density: "medium", // 'gentle', 'medium', 'abundant'
+    photos: [
+      {
+        id: "pr-1",
+        src: "/images/portrait-main.svg",
+        title: "Birthday Star",
+        caption: "Her radiant smile ✨",
+      },
+      {
+        id: "pr-2",
+        src: "/images/memory-1.svg",
+        title: "Sunset Glow",
+        caption: "Golden hour horizon with you",
+      },
+      {
+        id: "pr-3",
+        src: "/images/memory-2.svg",
+        title: "Cozy Cafe",
+        caption: "Hours flying by like minutes",
+      },
+      {
+        id: "pr-4",
+        src: "/images/memory-3.svg",
+        title: "Starry Sky",
+        caption: "The brightest star walks right beside me",
+      },
+      {
+        id: "pr-5",
+        src: "/images/memory-4.svg",
+        title: "Wildflowers",
+        caption: "Blooming with natural grace",
+      },
+      {
+        id: "pr-6",
+        src: "/images/memory-5.svg",
+        title: "Sweet Laughter",
+        caption: "Laughter that cures everything",
+      },
+      {
+        id: "pr-7",
+        src: "/images/memory-6.svg",
+        title: "Ocean Breeze",
+        caption: "Endless horizons and dreams",
+      },
+      {
+        id: "pr-8",
+        src: "/images/rain-1.svg",
+        title: "Golden Smiles",
+        caption: "Sparkles wherever you go ♡",
+      },
+      {
+        id: "pr-9",
+        src: "/images/rain-2.svg",
+        title: "Pure Magic",
+        caption: "Dreamy clouds & softest heart",
+      },
+      {
+        id: "pr-10",
+        src: "/images/rain-3.svg",
+        title: "Blooming Joy",
+        caption: "Gentle strength & blooming wonder",
+      },
+      {
+        id: "pr-11",
+        src: "/images/rain-4.svg",
+        title: "Moonlight",
+        caption: "Calm nights and warm thoughts",
+      },
+      {
+        id: "pr-12",
+        src: "/images/rain-5.svg",
+        title: "Heart Balloons",
+        caption: "Celebrating every bit of who you are",
+      },
+      {
+        id: "pr-13",
+        src: "/images/rain-6.svg",
+        title: "Forever Cherished",
+        caption: "Today and all days to come 💖",
+      },
+    ],
+  },
+
+  // ── 4. Surprise One: Personal Birthday Letter 💌 ──────────────────────
   letter: {
     sectionTitle: "Surprise One: A Personal Letter 💌",
     envelopePrompt: "There's something I wanted to tell you...",
@@ -136,7 +226,7 @@ export const birthdayData = {
     signature: "Yours Always ♡",
   },
 
-  // ── 4. Surprise Two: Things That Make You Special ✨ ───────────────────
+  // ── 5. Surprise Two: Things That Make You Special ✨ ───────────────────
   specialThings: {
     title: "Little Things That Make You, YOU ♡",
     subtitle: "A few of the countless reasons why having you around is a blessing. Tap each card to reveal.",
@@ -205,7 +295,7 @@ export const birthdayData = {
     },
   },
 
-  // ── 5. Surprise Three: The Birthday Cake 🎂 ───────────────────────────
+  // ── 6. Surprise Three: The Birthday Cake 🎂 ───────────────────────────
   cake: {
     title: "Make a Wish, Birthday Girl! 🎂",
     subtitle: "Every birthday needs a wish. Close your eyes, think of something you truly desire, and blow out the candles!",
@@ -214,7 +304,7 @@ export const birthdayData = {
     wishNote: "May every heartfelt prayer and secret wish you whispered today find its quiet way to reality this year. Happy Birthday!",
   },
 
-  // ── 6. Surprise Four: Her Photo Memories 📸 ───────────────────────────
+  // ── 7. Surprise Four: Her Photo Memories 📸 ───────────────────────────
   memories: {
     title: "Every Picture Has Its Own Little Story ♡",
     subtitle: "A visual timeline of sweet moments, quiet smiles, and beautiful chapters.",
@@ -277,7 +367,7 @@ export const birthdayData = {
     ],
   },
 
-  // ── 7. Surprise Five: The Hidden Gift 🎁 ──────────────────────────────
+  // ── 8. Surprise Five: The Hidden Gift 🎁 ──────────────────────────────
   gift: {
     title: "Wait... there's one more thing for you 🎁",
     subtitle: "A surprise wrapped with all my care. Untie the ribbon and see what's inside!",
@@ -294,11 +384,10 @@ export const birthdayData = {
       "🍕 Your favorite comfort food delivered to your door",
       "🌟 A guaranteed reminder of how amazing you are whenever you forget",
     ],
-    // If you have a video, put the path like "/videos/birthday-video.mp4" or a YouTube embed link
     videoUrl: "", 
   },
 
-  // ── 8. Surprise Six: A Personal Wish Just for Her ──────────────────────
+  // ── 9. Surprise Six: A Personal Wish Just for Her ──────────────────────
   wishForYou: {
     enabled: true,
     title: "If I Could Wish One Thing for You...",
@@ -328,10 +417,8 @@ export const birthdayData = {
     closingMessage: "May the next 365 days be your most radiant and happiest chapter yet.",
   },
 
-  // ── 9. Background Music Settings ──────────────────────────────────────
+  // ── 10. Background Music Settings ─────────────────────────────────────
   music: {
-    // If empty string, uses our built-in relaxing Web Audio harmonic ambient piano!
-    // Or set to '/music/your-song.mp3' for your own audio file.
     audioSrc: "",
     title: "A Soft Melody for You ♡",
     artist: "Romantic Ambient Lofi",

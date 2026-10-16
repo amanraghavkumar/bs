@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { birthdayData } from './config/birthdayData';
 import BackgroundEffects from './components/BackgroundEffects';
 import MusicPlayer from './components/MusicPlayer';
+import PhotoRain from './components/PhotoRain';
 import WelcomeScreen from './components/WelcomeScreen';
 import HeroSection from './components/HeroSection';
 import LetterSurprise from './components/LetterSurprise';
@@ -15,6 +16,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   const [hasEntered, setHasEntered] = useState(false);
+  const [isPhotoRainActive, setIsPhotoRainActive] = useState(birthdayData.photoRain?.enabled ?? true);
   const [lightboxState, setLightboxState] = useState({
     isOpen: false,
     photos: [],
@@ -46,10 +48,22 @@ export default function App() {
     setLightboxState((prev) => ({ ...prev, currentIndex: nextIndex }));
   };
 
+  const handleTogglePhotoRain = () => {
+    setIsPhotoRainActive((prev) => !prev);
+  };
+
   return (
     <div style={{ position: 'relative', minHeight: '100vh', width: '100%', overflowX: 'hidden' }}>
       {/* Dynamic Background Effects: Petals, Sparkles, and Floating Bokeh */}
       <BackgroundEffects />
+
+      {/* Falling Photo Rain Effect (तस्वीरों की बारिश) */}
+      <PhotoRain
+        config={birthdayData.photoRain}
+        onOpenPhoto={handleOpenPhoto}
+        isEnabled={isPhotoRainActive && hasEntered}
+        onToggle={handleTogglePhotoRain}
+      />
 
       {/* Floating Music Controller */}
       <MusicPlayer config={birthdayData.music} />

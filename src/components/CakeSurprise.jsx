@@ -132,8 +132,9 @@ export default function CakeSurprise({ cakeData, recipient }) {
         <div
           style={{
             position: 'relative',
-            width: '320px',
-            height: '290px',
+            width: '100%',
+            maxWidth: '320px',
+            aspectRatio: '320/290',
             margin: '0 auto 24px',
           }}
         >
@@ -141,7 +142,7 @@ export default function CakeSurprise({ cakeData, recipient }) {
             viewBox="0 0 320 290"
             width="100%"
             height="100%"
-            style={{ overflow: 'visible' }}
+            style={{ overflow: 'visible', maxWidth: '100%' }}
           >
             {/* Cake Stand Base */}
             <ellipse cx="160" cy="275" rx="140" ry="12" fill="#2d0a33" opacity="0.6" />

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="r1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="60%" stop-color="#db2777"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#r1)"/>
+  <circle cx="250" cy="220" r="80" fill="#fef08a" opacity="0.85"/>
+  <!-- Sparkles -->
+  <polygon points="250,90 255,115 280,120 255,125 250,150 245,125 220,120 245,115" fill="#ffffff"/>
+  <polygon points="140,240 143,255 158,258 143,261 140,276 137,261 122,258 137,255" fill="#ffffff" opacity="0.9"/>
+  <polygon points="360,250 363,265 378,268 363,271 360,286 357,271 342,268 357,265" fill="#ffffff" opacity="0.9"/>
+  <text x="250" y="370" fill="#ffffff" font-size="24" font-family="serif" font-weight="bold" text-anchor="middle">Golden Smiles ♡</text>
+  <text x="250" y="430" fill="#fef08a" font-size="14" font-family="sans-serif" text-anchor="middle">Photo Rain Collection</text>
+</svg>
